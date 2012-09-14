@@ -1,4 +1,29 @@
-@import '_mixins';
-@import '_screen';
-@import 'bootstrap/bootstrap';
+/*  In this file you should centralize your imports
+ * 	Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/yourprojectname.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+// Import external libraries first
+
+// @import 'bootstrap/bootstrap';
+/* You may want to just call bootstrap from the folder itself instead of 
+ * importing it into the main styles */
+
+
+// Mixins
+@import 'variables';
+@import 'mixins';
+
+// Resets
 @import "compass/reset";
+/* If using the bootstrap library we don't need to import comapss/reset
+ * as this is already included in the file */
+
+// typography
+@import 'typography';
+
+// Our main screen styles
+@import 'screen';
+
+//Navigation
+@import 'navigation';
