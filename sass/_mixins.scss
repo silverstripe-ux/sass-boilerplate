@@ -14,23 +14,23 @@
 }
 
 @mixin borderRadius($r){
-	@include roundedCorners($r, $r, $r, $r);
+	@include roundCorners($r, $r, $r, $r);
 }
 
 @mixin topCorners($r){
-	@include roundedCorners($r, $r, 0, 0);
+	@include roundCorners($r, $r, 0, 0);
 }
 
 @mixin bottomCorners($r){
-	@include roundedCorners(0, 0, $r, $r);
+	@include roundCorners(0, 0, $r, $r);
 }
 
 @mixin leftCorners($r){
-	@include roundedCorners($r, 0, 0, $r);
+	@include roundCorners($r, 0, 0, $r);
 }
 
 @mixin rightCorners($r){
-	@include roundedCorners(0, $r, $r, 0);
+	@include roundCorners(0, $r, $r, 0);
 }
 
 @mixin rotate($deg){
