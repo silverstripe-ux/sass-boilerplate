@@ -1,0 +1,72 @@
+@mixin borderRadius($cornerRadius){
+	border-radius: $cornerRadius;
+	-moz-border-radius: $cornerRadius;
+	-webkit-border-radius: $cornerRadius;
+
+	/* keeps background from busting out of border */
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+@mixin topCorners($r){
+	-moz-border-radius-topleft: $r;
+	-webkit-border-top-left-radius: $r;
+	border-top-left-radius: $r;
+	-moz-border-radius-topright: $r;
+	-webkit-border-top-right-radius: $r;
+	border-top-right-radius: $r;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+@mixin bottomCorners($r){
+	-moz-border-radius-bottomleft: $r;
+	-webkit-border-bottom-left-radius: $r;
+	border-bottom-left-radius: $r;
+	-moz-border-radius-bottomright: $r;
+	-webkit-border-bottom-right-radius: $r;
+	border-bottom-right-radius: $r;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+@mixin leftCorners($r){
+	-moz-border-radius-topleft: $r;
+	-webkit-border-top-left-radius: $r;
+	border-top-left-radius: $r;
+	-moz-border-radius-bottomleft: $r;
+	-webkit-border-bottom-left-radius: $r;
+	border-bottom-left-radius: $r;
+	border-radius: $r 0px 0px $r;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+@mixin rightCorners($r){
+	-moz-border-radius-topright: $r;
+	-webkit-border-top-right-radius: $r;
+	border-top-right-radius: $r;
+	-moz-border-radius-bottomright: $r;
+	-webkit-border-bottom-right-radius: $r;
+	border-bottom-right-radius: $r;
+	border-radius: 0px $r $r 0px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+@mixin rotate($deg){
+	-webkit-transform:rotate($deg);
+	-moz-transform:rotate($deg);
+	-ms-transform:rotate($deg);
+	-o-transform:rotate($deg);
+	transform:rotate($deg);
+}
