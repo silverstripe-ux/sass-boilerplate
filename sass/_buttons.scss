@@ -1,0 +1,12 @@
+/* Button Styles */
+
+.ui-icon{
+	width:18px;
+	height:18px;
+	border-radius:0;
+	box-shadow:none;
+	@include at2x("button_icons", 260px, 40px);
+	&.ui-icon-next{
+		background-position: 0px 0px;
+	}
+}

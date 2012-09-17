@@ -7,6 +7,7 @@
 /* 45 degree rotation to work on IE*/
 /* Fix for responsive images */
 /* Use on floated elements - :after creates the equivalent of <div class="clear"></div> below the floated element */
+/* Mobile icons for retina display */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 body { line-height: 1; }
@@ -25,15 +26,63 @@ a img { border: none; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
 /* If using the bootstrap library we don't need to import comapss/reset as this is already included in the file */
-/* All typography styles should go in here */
-.typography p { font-size: 14px; }
-.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 { font-weight: bold; }
+/** ----------------------------------------------------------  Contains the generic theme typography styles  Include your notes or table of contents here  Include color hex's or values of your grid  @author Your Name <email@gmail.com>  ------------------------------------------------------- */
+/* TEMPLATE CUSTOM FONTS */
+/* BASE TYPOGRPHY */
+body { font-size: 14px; line-height: 20px; margin-bottom: 20px; color: #333333; font-family: Arial, Helvetica, sans-serif; }
+
+body a { text-decoration: none; }
+
+body a:link { -webkit-tap-highlight-color: #0088CC; }
+
+.typography { /* HEADERS */ /* PARAGRAGHS */ /* LINKS */ /* LIST STYLES  */ /* TABLE STYLES  */ /* WYSIWYG EDITOR ALIGNMENT CLASSES */ /* IMAGES 
+-------------------------------------------- */ /* BLOCKQUOTES */ }
+.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 { font-weight: bold; margin-bottom: 5px; }
 .typography h1 { font-size: 27px; }
 .typography h2 { font-size: 21px; }
 .typography h3 { font-size: 18px; }
 .typography h4 { font-size: 15px; }
 .typography h5 { font-size: 14px; }
 .typography h6 { font-size: 12px; }
+.typography p { font-size: 14px; line-height: 20px; margin: 0 0 20px; }
+.typography em { font-style: italic; }
+.typography ::-moz-selection { background: #0088CC; color: #fff; text-shadow: none; }
+.typography ::selection { background: #0088CC; color: #fff; text-shadow: none; }
+.typography a { color: #0088CC; text-decoration: none; }
+.typography a:hover { color: #D80000; }
+.typography ul, .typography ol, .typography dl { margin: 0 0 20px 25px; }
+.typography ul li { list-style-type: disc; margin-bottom: 5px; }
+.typography table { border-collapse: collapse; border: 1px solid #d4d4d4; border-spacing: 0; margin: 0 0 10px; text-align: left; }
+.typography table tr:nth-child(even) { background-color: #ededed; }
+.typography table tr.even, .typography table th, .typography table thead td { background-color: #ededed; }
+.typography table td, .typography table th { padding: 2px 5px; border: 1px solid #d4d4d4; vertical-align: top; }
+.typography table th { font-weight: bold; }
+.typography .left { text-align: left; }
+.typography .center { text-align: center; }
+.typography .right { text-align: right; }
+.typography img { border: 5px solid #d7d7d7; height: auto; background: transparent url(../images/ajax-loader.gif) no-repeat center center; }
+.typography img.left { float: left; max-width: 60%; margin: 5px 20px 10px 0; }
+.typography img.right { float: right; max-width: 60%; /* Responsive width */ margin: 5px 0 10px 20px; }
+.typography img.leftAlone { float: left; margin-right: 100%; margin-bottom: 10px; clear: both; }
+.typography img.center { float: none; margin-left: auto; margin-right: auto; display: block; margin-bottom: 10px; clear: both; }
+.typography .captionImage { width: 100%; margin-top: 5px; }
+.typography .captionImage img { margin: 0; }
+.typography .captionImage img.left { float: left; margin: 5px 30px 20px 0px; }
+.typography .captionImage img.right { float: right; margin: 5px 0 20px 30px; }
+.typography .captionImage img.left[style], .typography .captionImage img.right[style] { max-width: 60%; /* Overides core width to make responsive */ }
+.typography .captionImage.left img, .typography .captionImage.right img { float: none; max-width: none; width: 100%; }
+.typography .captionImage.left img { margin-right: -10px; }
+.typography .captionImage.right img { margin-left: -10px; }
+.typography .captionImage.leftAlone { float: none; margin: 0 20px 20px 0px; }
+.typography .captionImage.center { margin: 0 auto 20px; }
+.typography .captionImage p { clear: both; margin: 5px 0; font-style: italic; color: #888; }
+.typography blockquote { background: transparent url(../images/blockquote.png) no-repeat 0px 6px; font-family: Georgia, "Times New Roman", Times, serif; color: #777; display: block; font-style: italic; margin: 0 0 20px; float: right; text-indent: 30px; width: 45%; margin-left: 5%; clear: both; }
+.typography blockquote p { font-size: 17px; line-height: 25px; }
+.typography pre { background: #F7F7F7; border: 1px solid #E4E4E4; font-family: Courier, monospace; margin: 0 0 20px 0; padding: 15px; clear: both; }
 
 /* In this file you should write your main styles. */
 /* Navigation styles */
+/* Button Styles */
+.ui-icon { width: 18px; height: 18px; border-radius: 0; box-shadow: none; background-image: url("../images/mobile/button_icons.png"); }
+@media all and (-webkit-min-device-pixel-ratio : 1.5) { .ui-icon { background-image: url("../images/mobile/button_icons@2x.png"); background-size: 260px 40px; } }
+.ui-icon.ui-icon-next { background-position: 0px 0px; }

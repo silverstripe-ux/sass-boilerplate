@@ -221,3 +221,14 @@
 	}
     zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }
+
+
+/* Mobile icons for retina display */
+@mixin at2x($image_name, $w: auto, $h: auto, $extention: '.png') {
+	background-image: url("../images/mobile/" + $image_name + $extention);
+	$x2img : $image_name + '@2x' + $extention;
+	@media all and (-webkit-min-device-pixel-ratio : 1.5) {
+		background-image: url("../images/mobile/" + $x2img);
+		background-size: $w $h;
+	}
+}
