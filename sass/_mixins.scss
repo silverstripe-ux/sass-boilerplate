@@ -200,6 +200,16 @@
 	transition-duration: $time;	
 }
 
+/* Fix for responsive images */
+@mixin flexImage {
+	max-width: 100%;
+	/* just in case, to force correct aspet ratio */
+	height: auto !important;
+	/* IE7 support - use this to make sure the images survive the scale-down */
+	-ms-interpolation-mode: bicubic;
+}
+
+/* Use on floated elements - :after creates the equivalent of <div class="clear"></div> below the floated element */
 @mixin clearFix(){
 	&:before,
 	&:after {
