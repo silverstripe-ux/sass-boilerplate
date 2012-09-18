@@ -200,7 +200,7 @@
 	transition-duration: $time;	
 }
 
-/* Fix for responsive images */
+/* Fix for responsive images - use on IMG tag */
 @mixin flexImage {
 	max-width: 100%;
 	/* just in case, to force correct aspet ratio */
