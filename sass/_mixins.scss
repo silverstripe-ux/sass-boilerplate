@@ -119,13 +119,15 @@
 	}
 }
 
-//Aligns content as vertically centered
-@mixin verticalAlign{
+// Aligns content as vertically centered
+// Note: parent element must have a height
+@mixin verticalAlign($element: ".center", $height:100%){
 	display: table;
+	height:$height;
 	#IE7 &{
-		position: relative; 	
+		position: relative;	 
 	}
-	.center{
+	#{$element}{
 		#IE7 &{
 			position: absolute; 
 			top: 50%; 
@@ -142,10 +144,10 @@
 				padding:0;
 				position: relative;
 				top: -50%;
-			}	
-		}	
-	}			
-}//end mixin
+			} 
+		} 
+	}		 
+}
 
 @mixin textOverflow{
 	white-space:nowrap;
@@ -317,5 +319,24 @@
 	@media all and (-webkit-min-device-pixel-ratio : 1.5) {
 		background-image: url("../images/mobile/" + $x2img);
 		background-size: $w $h;
+	}
+}
+
+/** 
+ * Mixin divides width of parent between children. It requires the parent to 
+ * have a size class representing the number of children (eg: class="size_3"). 
+ * It will take this and divide the width by that number of elements.
+ *
+ * Note: In silverstripe templates you can use $Count on a set of items you 
+ * are about to loop throught to get the total number. EG:
+ * <ul class="size_{$Menu.Count}">
+ */
+@mixin divide_width($from:1, $to:10){
+	@for $i from $from through $to {
+		&.size_#{$i} {
+			li{
+				width: 100% / $i;
+			}
+		} 
 	}
 }
