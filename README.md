@@ -5,12 +5,12 @@ sass-boilerplate
 
 *********************************************************************************
 
-This repository has been created to standardize the front-end development throught SilverStripe.
+This repository has been created to standardize the front-end development through SilverStripe.
 
 Copy the `/sass` and `/css` folders along with the `config.rb` file into your `/themes/mytheme/` directory.
-Rename the `yourprojectname.scss` to your projects name. 
+Rename the `yourprojectname.scss` to your project's name. 
 
 Run `compass compile` from the command line to recompile the css files. 
 
-Add this into the `<head>` of your Page.ss file using require tag `<% require themedCSS(yourprojectname) %>`
+Add this into the `<head>` of your Page.ss file using the require tag `<% require themedCSS(yourprojectname) %>`
 
